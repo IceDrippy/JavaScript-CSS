@@ -1,0 +1,10 @@
+const movies = [
+  "Crazy rich asians",
+  "Rush Hour",
+  "365 Days",
+  "The Italian Job",
+];
+
+console.log(
+  `My favorite movies are ${movies.slice(0, -1).join(" , ")} and ${movies.at(-1)}`,
+);
