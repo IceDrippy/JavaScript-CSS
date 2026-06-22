@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&family=Poppins:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        font-family: Roboto, sans-serif;
+
+        min-height: 100vh;
+        margin: 0;
+        display: grid;
+        place-content: center;
+      }
+
+      .social-container {
+        list-style: none;
+      }
+
+      /* : -> Pseudo selector :first-child, :last-child, :nth-child */
+
+      /* ul > li:first-child {
+        color: purple;
+      } */
+
+      /* .social-container > li:first-child {
+        color: purple;
+      } */
+
+      .social-container > li:nth-child(1) {
+        color: purple;
+      }
+
+      .social-container > li:nth-child(2) {
+        color: skyblue;
+      }
+
+      .social-container > li:nth-child(3) {
+        color: green;
+      }
+
+      .social-container > li:last-child {
+        color: purple;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="social-container">
+      <li><i class="fa-brands fa-instagram"></i> Instagram</li>
+      <li><i class="fa-brands fa-facebook"></i> Facebook</li>
+      <li><i class="fa-brands fa-whatsapp"></i> Whatsapp</li>
+      <li><i class="fa-brands fa-x"></i> Twitter</li>
+      <li><i class="fa-brands fa-linkedin"></i> Linkedin</li>
+    </ul>
+
+    <ul>
+      <li>Cheese</li>
+      <li>Eggs</li>
+      <li>Battery</li>
+    </ul>
+  </body>
+</html>

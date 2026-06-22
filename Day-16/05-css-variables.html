@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* Custom variable - (--) */
+      /* Global - Central Settings page */
+      /* Theming easier */
+      :root {
+        --primary-bg-clr: red;
+        --btn-clr: white;
+        --primary-text-clr: black;
+        --primary-ff: sans-serif;
+        --logo-ff: Pacifico;
+        --primary-pd: 1rem;
+      }
+
+      .nav {
+        padding-left: 0px;
+        list-style: none;
+        display: flex;
+        gap: 1rem;
+      }
+
+      a {
+        text-decoration: none;
+        color: var(--primary-text-clr);
+      }
+
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        /* background: pink; */
+
+        font-family: var(--primary-ff);
+        border: 2px solid var(--primary-bg-clr);
+        padding-inline: 1rem;
+      }
+
+      h2 {
+        font-family: var(--logo-ff);
+      }
+
+      /* Base */
+      .cta {
+        --pill-shaped-radius: 1000px;
+
+        background: var(--primary-bg-clr);
+        color: var(--btn-clr);
+        border-radius: var(--pill-shaped-radius);
+        border: none;
+        padding: calc(0.5 * var(--primary-pd)) var(--primary-pd);
+      }
+
+      /* Variants */
+      .payment {
+        --primary-bg-clr: teal;
+        --primary-pd: 2rem;
+      }
+
+      .cool {
+        --primary-bg-clr: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="payment cta">Pay Me 💰</button>
+
+    <button class="cool cta">Cool 💰</button>
+    <header>
+      <h2>Bullo</h2>
+
+      <!-- ul>li*3>a -->
+
+      <ul class="nav">
+        <li><a href="">Home</a></li>
+        <li><a href="">Service</a></li>
+        <li><a href="">Blog</a></li>
+        <li><a href="">About us</a></li>
+      </ul>
+
+      <button class="cta">Get Started</button>
+    </header>
+
+    <h1>Heading</h1>
+    <button class="cta">Get Started</button>
+  </body>
+</html>

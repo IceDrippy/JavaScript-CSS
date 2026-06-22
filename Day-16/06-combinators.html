@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      /* Combinators */
+      /* 1. Child > 
+         2. Ancestor <space> 
+         3. Adjacent sibling + 
+         4. General sibling ~ 
+      */
+
+      /* 
+      General formula
+      selector1 >   selector2{
+
+      }
+      */
+
+      /* .main-container > h1 {
+        color: orange;
+      } */
+
+      /* div > h1 {
+        color: orange;
+      } */
+
+      /* .main-container h1 {
+        color: orange;
+      } */
+
+      /* h1 + p {
+        color: purple;
+      } */
+
+      /* .text & h1 must be sibling & all h1 after .text */
+      /* .text ~ h1 {
+        color: purple;
+      } */
+
+      /* .fun + p + h1 {
+        color: purple;
+      } */
+
+      /* .main-container div > h1 + p{
+        color: orange
+      } */
+      /* 
+      .main-container > div > p,
+      .main-container > div > h1 {
+        color: orange;
+      } */
+
+      /* .main-container > h1 {
+        color: orange;
+      }
+
+      .main-container p {
+        color: purple;
+        font-style: italic;
+      } */
+
+      /* Modern Combinator */
+      /* .main-container {
+        p {
+          color: purple;
+          font-style: italic;
+        }
+
+        > h1 {
+          color: orange;
+        }
+      } */
+      /* 
+      h1 + p {
+        color: pink;
+      } */
+
+      h1 {
+        + p {
+          color: pink;
+        }
+
+        ~ p {
+          color: purple;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Super - Outside</h1>
+
+    <!-- Start -->
+    <div class="main-container">
+      <h1 class="fun">Fun</h1>
+      <p>Beautiful 1 🎊</p>
+
+      <h1>Cool</h1>
+
+      <div>
+        <h1>Awesome</h1>
+        <!-- Select -->
+        <p>Beautiful 2 🎊</p>
+      </div>
+
+      <p>Beautiful 3🎊</p>
+      <h1>Nice</h1>
+    </div>
+  </body>
+</html>

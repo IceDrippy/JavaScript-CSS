@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      /* li must be the first child of ul */
+      /* ul > li:first-child {
+        color: violet;
+      } */
+      /* 
+      ul > li:nth-child(3) {
+        color: violet;
+      } */
+
+      /* ul > li:first-of-type {
+        color: violet;
+      } */
+
+      /* li should be child of ul && it should be the first child of ul */
+      ul > li:nth-child(1) {
+        color: violet;
+      }
+
+      /* li should be child of ul && it should be the first of its kind in ul */
+      ul > li:nth-of-type(1) {
+        color: violet;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="social-container">
+      <h1>Cool</h1>
+      <p>Parra 1</p>
+      <li>Instagram</li>
+      <li>Facebook</li>
+      <h1>Cool 1</h1>
+      <p>Para 3</p>
+      <li><i class="fa-brands fa-whatsapp"></i> Whatsapp</li>
+      <li><i class="fa-brands fa-x"></i> Twitter</li>
+      <h1>Cool 2</h1>
+      <p>Parra 2</p>
+      <li><i class="fa-brands fa-linkedin"></i> Linkedin</li>
+    </ul>
+  </body>
+</html>

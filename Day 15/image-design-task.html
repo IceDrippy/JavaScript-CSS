@@ -1,70 +1,145 @@
 <!doctype html>
 <html>
     <head>
-        <meta charset="UTF-8"/>
+
+        <meta charset="UTF-8">
         <meta name="viewpoint" content= "width=device-width, initial-scale=1.0"/>
-        <title>Document Task</title>    
+        <title>Frontend Mentor</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Permanent+Marker&family=Playwrite+IT+Moderna:wght@100..400&family=Stack+Sans+Headline:wght@200..700&display=swap" rel="stylesheet">
 
         <style>
+
+            *{
+                box-sizing: border-box;
+            }
+
             .container{
-                border: 2px solid skyblue;
-                height:700px;
-                display: flex;
-                flex-direction: column;
-                background-color: oklch(0.1409 0.0538 263.47);
+                background-color: hsl(232.94deg 45.95% 7.25%);
                 display: grid;
-                min-height: 100vh;
+                min-height:100vh;
                 margin: 0;
                 place-content: center;
+                overflow: hidden;
             }
-            
+            .card-img{
+                width: 300px;
+                height:300px;    
+                background: url(./image-header-mobile.jpg);
+                background-color:hsl(276.59deg 45.05% 17.84%);
+                background-size: cover;
+                background-blend-mode: luminosity;
+                border-top-right-radius: 10px;
+                border-top-left-radius: 10px;
+                border:none ;
+            }
             .box{
-
-                background-blend-mode:luminosity;
-                width:150px;
+                width: 300px;
+                height: 480px;
+                background-color: hsl(245.81deg 38.27% 15.88%);
+                padding-inline:16px;                
+                text-align: center;
+                border-bottom-left-radius: 10px;
+                border-bottom-right-radius: 10px;              
             }
 
-            .box2{
-                background-color: rgb(52, 24, 111);
-                width:250px;
+            .heading{
+                font-family:"Noto Sans", sans-serif;
+                color: white;
+
+            }
+
+            .desc{
+                color:gray;
+                /* font-weight: ; */
+                font-family: Inter, sans-serif;
+            }
+
+            .stats-container{
+                margin:0 ;
+                padding: 0px;
+                display: flex;
+                flex-direction: column;
+            }
+            .stats-items{
+                color: white;
+                font-family: Inter, sans-serif;
+                letter-spacing: 3px;
                 
             }
-            p{
-                color:grey;
-            }
             h2{
-                color:whitesmoke;
+                margin:8px;
+            }
+            h5{
+                margin: 0px;
+                color: rgb(182, 180, 180);
             }
 
-            @media(width >= 400px){
-                .box{
+            @media(width >600px){
+                .container{
                     display: flex;
-                    flex-direction: row;
+                    flex-direction: row-reverse;
+                    place-content: center;
+
                 }
-                .box2{
+
+                .box{
+                    height:400px;
+                    width: 400px;  
+                }
+                .stats-container{
                     display: flex;
                     flex-direction: row;
+                    gap: 20px;
+                    
+
                 }
             }
+            
+           
         </style>
 
     </head>
     <body>
-        <div class=" container">
-            <div class="box">
-                <img src="Day 15\stats-preview-card-component-main 2\images\image-header-mobile.jpg">
+        <div class="container">
+            <div class="card-img">
+                
             </div>
-            <div class="box2">
-                <h2>Get <span>insights</span> that help your buisness grow</h2>
-                <p>Discover the benefits of data analytics and better decisions regarding revenue,customer experience,and overall efficiency.</p>
-                <h2>10k+</h2>
-                <p>COMPANIES</p>
-                <h2>314</h2>
-                <p>TEMPLATES</p>
-                <h2>12M+</h2>
-                <p>QUERIES</p>
+            <div class="box">
+                <div class ="heading">
+                    <h1>Get <span style=" color :blueviolet">insights</span> that help your buisness grow.</h1>
+
+                </div>
+                <div class="desc">
+                    <p>Discover the benefits of data analytics and make better decisions regarding revenue, customer experience, and overall efficiency.</p>
+                </div>
+
+                    <div class="stats-container">
+
+                        <div class="stats-items">
+                            <h2>10k+</h2>
+                            <h5>COMPANIES</h5>
+                        </div>
+
+                         <div class="stats-items">
+                            <h2>314</h2>
+                            <h5>TEMPLATES</h5>
+                        </div>
+
+                         <div class="stats-items">
+                            <h2>12M+</h2>
+                            <h5>QUERIES</h5>
+                        </div>
+
+                    </div>
+                
+
+                </div>
+
             </div>
 
         </div>
-    </body>  
+    </body>
 </html>
