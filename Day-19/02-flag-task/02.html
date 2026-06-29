@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* Your Code */
+      :root {
+        --primary-bg: whitesmoke;
+        --card-bg: white;
+      }
+
+      body {
+        background: var(--primary-bg);
+      }
+
+      .card-container {
+        background: var(--card-bg);
+        border-radius: 1rem;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+        font-family: sans-serif;
+        width: 15rem;
+        overflow: hidden;
+
+        img {
+          height: 10rem;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .card-content-container {
+        padding-inline: 1rem;
+        padding-block-end: 0.5rem;
+      }
+
+      .countries-container {
+        /* display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+        gap: 1rem; */
+
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: space-around;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- No HTML Code Here -->
+
+    <!-- 
+    <section class="countries-container">
+      <div class="card-container">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/7/7b/India_flag_300.png"
+          alt="India flag"
+        />
+        <div class="card-content-container">
+          <h3>India</h3>
+          <p><strong>Population:</strong> 1,34,975,829</p>
+          <p><strong>Region:</strong> Asia</p>
+          <p><strong>Capital:</strong> New delhi</p>
+        </div>
+      </div>
+    </section> 
+    -->
+
+    <script>
+      const countriesInfo = [
+        {
+          name: "India",
+          population: "1,394,975,829",
+          region: "Asia",
+          flag: "https://upload.wikimedia.org/wikipedia/en/4/41/Flag_of_India.svg",
+          capital: "New Delhi",
+        },
+        {
+          name: "Germany",
+          population: "81,770,900",
+          region: "Europe",
+          flag: "https://upload.wikimedia.org/wikipedia/en/b/ba/Flag_of_Germany.svg",
+          capital: "Berlin",
+        },
+        {
+          name: "United States",
+          population: "323,947,000",
+          region: "Americas",
+          flag: "https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg",
+          capital: "Washington, D.C.",
+        },
+        {
+          name: "Brazil",
+          population: "206,135,893",
+          region: "Americas",
+          flag: "https://upload.wikimedia.org/wikipedia/en/0/05/Flag_of_Brazil.svg",
+          capital: "Brasília",
+        },
+        {
+          name: "Iceland",
+          population: "334,300",
+          region: "Europe",
+          flag: "https://upload.wikimedia.org/wikipedia/commons/c/ce/Flag_of_Iceland.svg",
+          capital: "Reykjavik",
+        },
+        {
+          name: "South Africa",
+          population: "55,653,654",
+          region: "Africa",
+          flag: "https://upload.wikimedia.org/wikipedia/commons/a/af/Flag_of_South_Africa.svg",
+          capital: "Pretoria",
+        },
+      ];
+
+      const country = {
+        name: "South Africa",
+        population: "55,653,654",
+        region: "Africa",
+        flag: "https://upload.wikimedia.org/wikipedia/commons/a/af/Flag_of_South_Africa.svg",
+        capital: "Pretoria",
+      };
+
+      const countriesContainer = document.createElement("section");
+      countriesContainer.setAttribute("class", "countries-container");
+
+      const cardContainer = document.createElement("div");
+      cardContainer.setAttribute("class", "card-container");
+
+      const cardContentContainer = document.createElement("div");
+      cardContentContainer.setAttribute("class", "card-content-container");
+
+      const flag = document.createElement("img");
+      flag.setAttribute("src", country.flag);
+
+      const countryName = document.createElement("h3");
+      countryName.innerText = country.name;
+      cardContentContainer.append(countryName);
+
+      const countryPopulation = document.createElement("p");
+      countryPopulation.innerText = `Population: ${country.population}`;
+      cardContentContainer.append(countryPopulation);
+
+      const countryRegion = document.createElement("p");
+      countryRegion.innerText = `Region: ${country.region}`;
+      cardContentContainer.append(countryRegion);
+
+      const countryCapital = document.createElement("p");
+      countryCapital.innerText = `Capital: ${country.capital}`;
+      cardContentContainer.append(countryCapital);
+
+      document.querySelector("body").append(countriesContainer);
+      countriesContainer.append(cardContainer);
+      cardContainer.append(flag);
+      cardContainer.append(cardContentContainer);
+      // Your Code
+    </script>
+  </body>
+</html>

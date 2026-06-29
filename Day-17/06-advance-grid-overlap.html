@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .container {
+        display: grid;
+
+        grid-template-columns: repeat(5, 100px);
+        grid-template-rows: repeat(5, 100px);
+        outline: 2px solid orange;
+
+        div {
+          background: pink;
+          outline: 2px solid;
+        }
+
+        .first {
+          background: purple;
+          grid-column: 1 / 4;
+          grid-row: 1 / 4;
+          z-index: 2;
+        }
+
+        .second {
+          background: orange;
+          grid-column: 3 / 6;
+          grid-row: 1/2;
+          z-index: 3;
+        }
+
+        .third {
+          grid-column: 3 / 6;
+          grid-row: 3 / 6;
+          grid-column: 3 / -1;
+          grid-row: 3 / -1;
+          grid-column: 3 / 5;
+          z-index: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="container">
+      <div class="first"></div>
+      <div class="second"></div>
+      <div class="third"></div>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+        display: grid;
+        place-content: center;
+        min-height: 100vh;
+
+        font-family: sans-serif;
+      }
+
+      h1 {
+        font-size: 4rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>10</h1>
+
+    <!-- 
+    Use callback hell pattern
+    Don't use setInterval 
+    Clue: DOM skills
+    -->
+    <script>
+
+      let countdown = +document.querySelector("h1").innerText;
+      const countDownDisplay= document.querySelector("h1");
+
+      setTimeout( () => {
+        countdown--;
+        countDownDisplay.innerText =countdown;
+        setTimeout( () => {
+          countdown--;
+          countDownDisplay.innerText =countdown; 
+          setTimeout( () => {
+            countdown--;
+            countDownDisplay.innerText =countdown; 
+            setTimeout( () => {
+              countdown--;
+              countDownDisplay.innerText =countdown; 
+              setTimeout( () => {
+                countdown--;
+                countDownDisplay.innerText =countdown; 
+                setTimeout( () => {
+                  countdown--;
+                  countDownDisplay.innerText =countdown; 
+                   setTimeout( () => {
+                    countdown--;
+                    countDownDisplay.innerText =countdown; 
+                     setTimeout( () => {
+                      countdown--;
+                      countDownDisplay.innerText =countdown; 
+                      setTimeout( () => {
+                        countdown--;
+                        countDownDisplay.innerText =countdown; 
+                        setTimeout( () => {
+                          countdown--;
+                          countDownDisplay.innerText =countdown; 
+                          setTimeout( () => {
+                            countdown--;
+                            countDownDisplay.innerText =countdown; 
+                            
+                          },1000);
+                        },1000);
+                      },1000);
+                    },1000);
+                  },1000);
+                },1000);
+              },1000);
+            },1000);
+          },1000);
+        },1000);
+      },1000);
+   
+
+    </script>
+  </body>
+</html>

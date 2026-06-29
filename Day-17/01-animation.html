@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* Starting Style */
+      .box {
+        height: 200px;
+        aspect-ratio: 1/1;
+        background: crimson;
+        transition: 0.2s all;
+        transition: 0.2s all cubic-bezier(0.25, 0.94, 1, 1.38);
+        transition: 0.2s all ease-in-out;
+      }
+
+      /* Ending Style */
+      /* Mouse over the box */
+      .box:hover {
+        /* transform: translateX(2rem) translateY(2rem); */
+        /* transform: translateY(-4rem); */
+        /* transform: rotate(360deg); */
+        /* background: orange; */
+        /* border-radius: 50%; */
+        transform: scale(1.1);
+        cursor: pointer;
+      }
+
+      /* Click on the box */
+      .box:active {
+        transform: scale(0.9);
+        /* background: teal; */
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+
+    <!-- <a href="http://">Googel</a> -->
+  </body>
+</html>
+
+<!-- 
+pseudo selector
+        1. class - :  , :nth-child, :nth-of-type, :hover
+        2. element - :: (Decoration), ::after, ::before  
+ -->

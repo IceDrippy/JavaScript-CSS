@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background: plum;
+        min-height: 100vh;
+        display: grid;
+        place-content: center;
+        gap: 0.5rem;
+      }
+
+      button {
+        font-size: 2.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Eventlistener: onclick - listens for click event -->
+    <button onclick="start()">▶️</button>
+    <button onclick="pause()">⏸️</button>
+    <button onclick="stop()">⏹️</button>
+    <script>
+      const colors = ["crimson", "orange", "teal", "pink", "yellow"];
+      // Clue: window & dom methods, Lexical scope
+
+      //   Task 3.1 -  Every 2s body color must change and then cycle
+
+      //   Task 3.2
+
+      // index - 2
+      let index = 0;
+      let clrInterval;
+      function start() {
+        stop();
+        console.log("Starting...");
+
+        clrInterval = setInterval(() => {
+          if (index == colors.length) {
+            index = 0;
+          }
+          console.log(index, colors[index]);
+          document.querySelector("body").style.background = colors[index];
+          index++;
+        }, 2000);
+      }
+
+      //  Task 3.3 - After stop, When restart again start from first color
+      //  Clue: Lexical scope
+      function stop() {
+        console.log("Stopping...");
+        clearInterval(clrInterval);
+        index = 0;
+      }
+
+      // Task 3.4  - After Pause,  When restart again start continue from the pause color
+      function pause() {
+        console.log("Pausing...");
+        clearInterval(clrInterval);
+      }
+    </script>
+  </body>
+</html>

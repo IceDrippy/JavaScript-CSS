@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p class="msg">This is cool</p>
+    <h1>Super Awesome</h1>
+    <h1 class="msg abc">Do Good, Be Good</h1>
+
+    <!-- Each IDs must be unique -->
+    <p id="quote">To be, or not to be. NOT!</p>
+
+    <ul>
+      <li>👚 Crochet</li>
+      <li>📘 Reading</li>
+      <li>✈️ Traveling</li>
+      <li>🎮 Gaming</li>
+      <li>🏸 Badminton</li>
+    </ul>
+
+    <script>
+      // Update
+      const quote = document.querySelector("#quote");
+      console.log(typeof quote);
+      console.log(quote.innerText);
+      quote.innerText = "No Pain, No Gain";
+
+      const student = {
+        name: "Raghul",
+        age: 20,
+      };
+
+      student.age = 21;
+
+      const headings2 = document.querySelectorAll("h1");
+
+      //   NodeList
+      console.log(headings2);
+      console.log(headings2[0].innerText);
+      headings2[0].innerText = "This is fun";
+    </script>
+  </body>
+</html>
+
+<!-- 
+1. Read 
+2. Update
+3. Delete
+4. Create
+-->
+
+<!-- document -> DOM (Access)  -->

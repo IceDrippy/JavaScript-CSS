@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p class="msg">This is cool</p>
+    <h1>Super Awesome</h1>
+    <h1 class="msg abc">Do Good, Be Good</h1>
+
+    <!-- Each IDs must be unique -->
+    <p id="quote">To be, or not to be. NOT!</p>
+
+    <ul>
+      <li>👚 Crochet</li>
+      <li>📘 Reading</li>
+      <li>✈️ Traveling</li>
+      <li>🎮 Gaming</li>
+      <li>🏸 Badminton</li>
+    </ul>
+
+    <script>
+      // Reading from DOM
+
+      //   HTML Collection - Array like
+      const headings = document.getElementsByTagName("h1");
+      console.log(headings);
+      console.log(headings[0].innerText); // Super Awesome
+      console.log(headings[0].innerHTML); // Super Awesome
+
+      console.log(headings[1].innerText);
+      console.log(headings[1].innerHTML);
+
+      const lists = document.getElementsByTagName("ul");
+
+      console.log(lists);
+
+      //   👚 Crochet
+      //   📘 Reading
+      //   ✈️ Traveling
+      //   🎮 Gaming
+      //   🏸 Badminton
+
+      console.log(lists[0].innerText);
+
+      // <li>👚 Crochet</li>
+      //   <li>📘 Reading</li>
+      //   <li>✈️ Traveling</li>
+      //   <li>🎮 Gaming</li>
+      //   <li>🏸 Badminton</li>
+
+      console.log(lists[0].innerHTML);
+
+      const messages = document.getElementsByClassName("msg");
+      console.log(messages);
+      console.log(messages[0].innerText);
+      console.log(messages[1].innerText);
+
+      //   Task 1.1 - Print 'Do Good, Be Good' in console
+
+      //   First one wins
+      const result = document.getElementById("quote");
+      console.log(result.innerText);
+
+      //   Why these 3 methods needed?
+      //   HTML Collection (Read)
+      //  1. getElementsByTagName (multiple)
+      //  2. getElementsByClassName  (multiple)
+      //  3. getElementById (one)
+
+      //   document.querySelectorAll('css selector') all 3
+      const headings1 = document.getElementsByTagName("h1");
+    </script>
+  </body>
+</html>
+
+<!-- 
+1. Read 
+2. Update
+3. Delete
+4. Create
+-->
+
+<!-- document -> DOM (Access)  -->

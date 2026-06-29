@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      :root {
+        --primary-grapic-clr: hsl(168, 77%, 15%);
+        --footer-clr: hsl(167, 34%, 41%);
+        --red: hsl(7, 99%, 70%);
+        --yellow: hsl(51, 100%, 49%);
+        --secondary-photo-clr: hsl(197, 80%, 15%);
+        --secondary-txt-clr: hsl(212, 88%, 7%);
+        --accent-txt-clr: hsl(0, 100%, 100%);
+        --grey-600: hsl(213, 9%, 39%);
+        --grey-550: hsl(232, 10%, 55%);
+        --ff-Barlow: "Barlow", sans-serif;
+        --ff-Fraunces: "Fraunces", serif;
+      }
+
+      .client-testimonials-container {
+        outline: 2px solid black;
+        padding: 4.5rem 0rem;
+        text-align: center;
+
+        h2 {
+          margin-block-end: 2rem;
+          text-transform: uppercase;
+          font-size: 1.4rem;
+        }
+      }
+
+      .testimonials-container {
+        /* display: flex;
+        gap: 1rem;
+        justify-content: center;
+        flex-wrap: wrap; */
+
+        display: grid;
+        max-width: calc(3 * 20rem);
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
+        column-gap: 1rem;
+        margin: 0 auto;
+
+        .testimonial {
+          /* outline: 2px solid black; */
+
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          > * {
+            /* outline: 2px solid orange; */
+          }
+
+          > p {
+            flex-grow: 1;
+          }
+
+          img {
+            border-radius: 50%;
+            height: 4.5rem;
+            aspect-ratio: 1/1;
+            object-fit: cover;
+          }
+        }
+      }
+
+      body {
+        margin: 0;
+      }
+    </style>
+
+    <title>Frontend Mentor | Sunnyside agency landing page</title>
+  </head>
+  <body>
+    <section class="client-testimonials-container">
+      <h2 class="section-heading">Client testimonials</h2>
+      <div class="testimonials-container">
+        <div class="testimonial">
+          <img src="./images/image-emily.jpg" alt="" />
+          <p>
+            We put our trust in Sunnyside and they delivered, making sure our
+            needs were met and deadlines were always hit.
+          </p>
+          <div class="author-name-container">
+            <h3>Emily R.</h3>
+            <p>Marketing Director</p>
+          </div>
+        </div>
+        <div class="testimonial">
+          <img src="./images/image-thomas.jpg" alt="" />
+          <p>
+            Sunnyside’s enthusiasm coupled with their keen interest in our
+            brand’s success made it a satisfying and enjoyable experience.
+          </p>
+          <div class="author-name-container">
+            <h3>Thomas S.</h3>
+            <p>Chief Operating Officer</p>
+          </div>
+        </div>
+        <div class="testimonial">
+          <img src="./images/image-jennie.jpg" alt="" />
+          <p>
+            Incredible end result! Our sales increased over 400% when we worked
+            with Sunnyside. Highly recommended!
+          </p>
+          <div class="author-name-container">
+            <h3>Jennie F.</h3>
+            <p>Business Owner</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul></ul>
+    <script>
+      const list = document.querySelector("ul");
+      console.log(list.innerText);
+      console.log(list.innerHTML);
+
+      // list.innerText = "<li>Chess</li>";
+      //   list.innerHTML = "<li>Chess</li> <li>Cricket</li>";
+
+      list.innerHTML = `<li>Chess</li> 
+                        <li>Cricket</li>`;
+    </script>
+  </body>
+</html>

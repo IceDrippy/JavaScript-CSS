@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=
+    , initial-scale=1.0"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Task 2.1  Make hobbies appear on screen using JS-->
+    <h2>Hobbies</h2>
+    <ul class="hobbies-container"></ul>
+
+    <script>
+      const hobbies = [
+        "📚 Reading",
+        "🎨 Painting",
+        "📸 Photography",
+        "🥾 Hiking",
+        "🌱 Gardening",
+        "👨‍🍳 Cooking",
+        "🎶 Playing musical instruments",
+        "🧶 Knitting",
+      ];
+
+      //   for (const hobby of hobbies) {
+      //     const listItem = document.createElement("li");
+      //     listItem.innerText = hobby;
+      //     document.querySelector(".hobbies-container").append(listItem);
+      //   }
+
+      //   //   Arrow + Anonymous function
+      //   const result = [1, 2, 3].map((num) => num * 2);
+      //   console.log(result);
+
+      hobbies.forEach((hobby) => {
+        const listItem = document.createElement("li");
+        listItem.innerText = hobby;
+        document.querySelector(".hobbies-container").append(listItem);
+      });
+
+      //   const list = document.querySelector(".hobbies-container");
+      //   list.append(listItem);
+
+      // Task 2.2 - Same as Task 2.1
+      // Don't use append or createElement
+      // Clue: innerHTML
+
+      //   Task 2.3 - same Task 2.2 with map, join method
+    </script>
+  </body>
+</html>

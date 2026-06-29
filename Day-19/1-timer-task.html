@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // window.setTimeout
+      // window.setInterval
+      // console.log("Started");
+
+      // const timer = () => {
+      //   console.log("Hi, Nolo");
+      // };
+
+      // // HOF
+      // setTimeout(() => {
+      //   console.log("Hi, Nolo");
+      // }, 2 * 1000); // 1000ms = 1s
+
+      // // Timer, dbl - callback function
+      // setTimeout(timer, 2 * 1000);
+
+      // const dbl = (num) => num * 2;
+      // // dbl(1) , dbl(2) , dbl(10) - HOF
+      // const result = [1, 2, 10].map(dbl);
+
+      // // dbl(4)
+
+      // console.log("Started");
+
+      // // 1. Timer - Only once
+      // setTimeout(() => {
+      //   console.log("Hi, Nolo");
+      // }, 2 * 1000); // 1000ms = 1s
+
+      // 2. Runner - Every 5s callback fn is called
+
+      console.log("Started 🚀");
+      const msgInterval = setInterval(() => {
+        console.log("Hi, Sanlam");
+      }, 2 * 1000);
+
+      // 3. Stopper
+
+      // Timer
+      setTimeout(() => {
+        clearInterval(msgInterval); // Stopper
+        console.log("Done ✅");
+      }, 6 * 1000);
+
+      // Task
+      // Hi, Sanlam - Print 3 times (2sec gap) then stop
+
+      // Started 🚀
+      // (2s time)
+      // Hi, Sanlam
+      // (2s time)
+      // Hi, Sanlam
+      // (2s time)
+      // Hi, Sanlam
+      // Done ✅
+    </script>
+  </body>
+</html>
