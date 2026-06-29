@@ -8,61 +8,138 @@
   
   <title>Frontend Mentor | Sunnyside agency landing page</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700;900&display=swap" rel="stylesheet">
+
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    *{
+      box-sizing:border-box;
+    }
+
+    :root{
+      --primaty-text-clr :hsl(0, 100%, 100%);
+      --red-clr : hsl(7, 99%, 70%);
+      --Yellow-clr : hsl(51, 100%, 49%);
+      --Green-clr  : hsl(167, 40%, 24%);
+      --Blue-clr : hsl(198, 62%, 26%);
+      --Green-clr: hsl(167, 34%, 41%);
+
+      --Grey1: hsl(212, 27%, 19%);
+      --Grey2: hsl(213, 9%, 39%);
+      --Grey3: hsl(232, 10%, 55%);
+      --Grey4: hsl(210, 4%, 67%);
+
+      --primary-ff :  Barlow, sans-serif;
+      --secondary-ff: Fraunces, serif;
+      --fw-1: 600;
+      --fw-2: 700;
+
+      --primary-font-sz: 18px;
+
+    }
+
+    .main-container{
+      margin :0;
+      border: 2px solid;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(25rem ,1fr));
+      
+      
+    }
+
+    .heading-bckgrd{
+      background:url(./images/mobile/image-header.jpg);
+      background-size: cover;
+      background-position: 50% 80%;
+
+      background-repeat: no-repeat;
+      height : 500px;
+    }
+
+    .heading-box1{
+      display :flex;
+      justify-content: space-between;
+      padding-inline: 1rem;
+      padding-block:1rem;
+    }
+    .heading-box2{
+      color: var(--primaty-text-clr);
+      font-family: var(--primary-ff);
+      text-align: center;
+      padding-inline: 5rem;
+    }
+
+    .heading-box3{
+      text-align: center;
+      padding-block-start: 1rem;
+    }
+
+  
+
+    .body{
+      margin :0;
+    }
+
+    .learn-more-main-container{
+
+    }
+
+    .learn-more-section1{
+      
+    }
+
+    .learn-more-img{
+      object-fit: cover;
+    }
+    .learn-more-headers{
+      color: var(--Grey1);
+      font-family: var(--secondary-ff);
+      font-weight: var(--fw-2);
+      text-align: center;
+      padding-inline: 5rem;
+    }
+
+    .learn-more-footer{
+      color: var(--Grey1);
+      font-family: var(--secondary-ff);
+      font-weight: var(--fw-2);
+      text-align: center;
+      
+    }
+
+    
+
   </style>
 </head>
 <body>
-  About
-  Services
-  Projects
-  Contact
+  <section class="main-container">
+    <div class="heading-bckgrd">
+      <div class ="heading-box1">
+        <img src ="./images/logo.svg" alt ="logo" />
+        <img src ="./images/icon-hamburger.svg" alt="sidebar"/>
+      </div>
+      <div class="heading-box2">
+        <h1> WE ARE CREATIVES</h1>
+      </div>
+      <div class ="heading-box3">
+        <img src ="./images/icon-arrow-down.svg" alt ="arrow"/>
+      </div>
+    </div>
+    <div class="learn-more-main-container">
+      <div class="learn-more-section1">
+        <div class="learn-more-headers">
+          <h2>Transform your brand</h2>
+          <h4 style="text-decoration: underline ; text-decoration-color: var(--Yellow-clr)">LEARN MORE</h4>
+        </div>
+      </div>
+    </div>
+    
 
-  We are creatives
-
-  Transform your brand
-
-  We are a full-service creative agency specializing in helping brands grow fast. 
-  Engage your clients through compelling visuals that do most of the marketing for you.
-
-  Learn more
-
-  Stand out to the right audience
-
-  Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we’ll build and extend your brand in digital places. 
-
-  Learn more
-
-  Graphic design
-  Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients’ attention.
-
-  Photography
-  Increase your credibility by getting the most stunning, high-quality photos that improve your business image.
-
-  Client testimonials
-
-  We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.
-  Emily R.
-  Marketing Director
-
-  Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success made it a satisfying and enjoyable experience.
-  Thomas S.
-  Chief Operating Officer
-
-  Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!
-  Jennie F.
-  Business Owner
-
-  About
-  Services
-  Projects
-  Contact
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+  </section>
 </body>
 </html>
