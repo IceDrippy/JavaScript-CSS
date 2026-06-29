@@ -63,9 +63,9 @@ task1_2(mealIds);
 // Task 1.2
 // Write a function to get the first 3 recipes name & youtube link given the ingredient
 
-function getRecipesFromIng(ingredient) {}
+function getRecipeIdsFromIng(ingredient) {}
 
-getRecipesFromIng("chicken breast");
+getRecipeIdsFromIng("chicken breast");
 
 // [
 //     {
