@@ -27,7 +27,7 @@
       --Yellow-clr : hsl(51, 100%, 49%);
       --Green-clr  : hsl(167, 40%, 24%);
       --Blue-clr : hsl(198, 62%, 26%);
-      --Green-clr: hsl(167, 34%, 41%);
+      --Green2-clr: hsl(167, 34%, 41%);
 
       --Grey1: hsl(212, 27%, 19%);
       --Grey2: hsl(213, 9%, 39%);
@@ -85,8 +85,6 @@
     }
 
     .learn-more-main-container{
-      
-
     }
 
     .learn-more-main-container img{
@@ -122,7 +120,202 @@
       color:var(--Grey4); 
     }
 
+    .graphic-design-main-container{
+      
+    }
+
+    .graphic-design{
+      background: url(./images/mobile/image-graphic-design.jpg);
+      background-size: cover;
+      background-position: 50% 35%;
+
+      background-repeat: no-repeat;
+      height:500px;
+
+      display:flex;
+      flex-direction: column;
+      justify-content: end;
+      
+    }
+
+    .graphic-clr{
+      color: var(--Green-clr);
+      text-align: center;
+
+      padding-bottom: 2.5rem; 
+      padding-inline: 1.5rem;
+
+    }
+     .graphic-design-main-container p{
+      font-family: var(--primary-ff);
+      font-size: var(--primary-font-sz);
+    }
     
+
+    .photography{
+      background: url(./images/mobile/image-photography.jpg);
+      background-size: cover;
+      background-position: center;
+
+      background-repeat: no-repeat;
+      height:500px;
+
+      display:flex;
+      flex-direction: column;
+      justify-content: end;
+    }
+
+    .photo-clr{
+      color: var(--Blue-clr);
+      text-align: center;
+
+      padding-bottom: 2.5rem; 
+      padding-inline: 1.5rem;
+
+    }
+
+    .client-testimonials-container {
+      
+      padding: 4.5rem 0rem;
+      text-align: center;
+
+      h2{
+        margin-block-end: 2rem;
+        text-transform: uppercase;
+       font-size: 1.4rem;
+      }
+    }
+
+    .testimonials-container {
+        /* display: flex;
+        gap: 1rem;
+        justify-content: center;
+        flex-wrap: wrap; */
+
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
+        column-gap: 1rem;
+        margin: 0 auto;
+
+      .testimonial {
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        > p {
+          flex-grow: 1;
+        }
+
+        img {
+          border-radius: 50%;
+          height: 4.5rem;
+          aspect-ratio: 1/1;
+          object-fit: cover;
+        }
+      }
+    }
+
+    .rand-pics{
+
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      margin : 0;
+
+      img{
+        width:100%;
+        height:200px;
+        object-fit: cover;
+      }
+    }
+
+    footer{
+      background-color: var(--Green2-clr);
+      color:var(--Green-clr);
+      
+    }
+
+    .footer-links {
+      display: flex;
+      flex-direction: row;
+      justify-content: center; 
+      gap: 1.3rem;
+      list-style: none;
+      padding-block-end:3rem;
+    }
+
+    @media (min-width: 601px) {
+ 
+  .main-container {
+    grid-template-columns: 1fr;
+  }
+
+  
+  .heading-bckgrd {
+    background-image: url(./images/desktop/image-header.jpg);
+    height: 80vh;
+  }
+
+  .learn-more-main-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+
+  
+  .learn-more-main-container:nth-of-type(1) {
+    grid-template-areas: "text img";
+  }
+  .learn-more-main-container:nth-of-type(1) img { grid-area: img; }
+  .learn-more-main-container:nth-of-type(1) .learn-more-section { grid-area: text; }
+
+  .learn-more-main-container:nth-of-type(2) {
+    grid-template-areas: "img text";
+  }
+  .learn-more-main-container:nth-of-type(2) img { grid-area: img; }
+  .learn-more-main-container:nth-of-type(2) .learn-more-section { grid-area: text; }
+
+  
+  .learn-more-main-container img {
+    height: 100%;
+    min-height: 500px;
+  }
+
+  
+  .learn-more-section {
+    padding-inline: 4rem;
+    text-align: left;
+  }
+  .learn-more-header {
+    padding-inline: 0;
+  }
+
+  .graphic-design-main-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .graphic-design {
+    background-image: url(./images/desktop/image-graphic-design.jpg);
+    height: 600px;
+  }
+  .photography {
+    background-image: url(./images/desktop/image-photography.jpg);
+    height: 600px;
+  }
+  
+  .graphic-clr, .photo-clr {
+    padding-inline: 6rem;
+  }
+
+  .rand-pics {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .rand-pics img {
+    height: 350px;
+  }
+}
 
   </style>
 </head>
@@ -142,7 +335,7 @@
     </div>
 
     <div class="learn-more-main-container">
-      
+      <img src="./images/desktop/image-transform.jpg" />
       <div class="learn-more-section">
         <div class="learn-more-header">
           <h2>Transform your brand</h2>
@@ -153,7 +346,100 @@
         </div>
       </div>
     </div>
+    <div class="learn-more-main-container">
+      <img src="./images/mobile/image-stand-out.jpg" />
+      <div class="learn-more-section">
+        <div class="learn-more-header">
+          <h2>Stand out to the right audience</h2>
+        </div>
+        <p>Using a collaborative formula of designers, researchers, photographers,videographers, and copywrites, we'll build and extend your brand in digital places.</p>
+        <div class="learn-more-footer">
+          <h4 style="text-decoration: underline ; text-decoration-color: var(--red-clr)">LEARN MORE</h4>
+        </div>
+      </div>
+    </div>
+
+    <div class="graphic-design-main-container">
+      <div class="graphic-design">
+        <div class="learn-more-header graphic-clr ">
+          <h2>Graphic Design</h2>
+          <p>Great design makes you memorable.We deliver artwork that underscores your brand message and captures potetial clients attention.</p>
+        </div>
+      </div>
+
+      <div class="photography">
+        <div class="learn-more-header photo-clr ">
+          <h2>Photography</h2>
+          <p>Increase your credibility by getting the most stunning, high-quality photos that improve your buisness image.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="client-testimonials-container">
+      <h2 class="section-heading">Client testimonials</h2>
+      <div class="testimonials-container">
+        <div class="testimonial">
+          <img src="./images/image-emily.jpg" alt="" />
+          <p>
+            We put our trust in Sunnyside and they delivered, making sure our
+            needs were met and deadlines were always hit.
+          </p>
+          <div class="author-name-container">
+            <h3>Emily R.</h3>
+            <p>Marketing Director</p>
+          </div>
+        </div>
+        <div class="testimonial">
+          <img src="./images/image-thomas.jpg" alt="" />
+          <p>
+            Sunnyside’s enthusiasm coupled with their keen interest in our
+            brand’s success made it a satisfying and enjoyable experience.
+          </p>
+          <div class="author-name-container">
+            <h3>Thomas S.</h3>
+            <p>Chief Operating Officer</p>
+          </div>
+        </div>
+        <div class="testimonial">
+          <img src="./images/image-jennie.jpg" alt="" />
+          <p>
+            Incredible end result! Our sales increased over 400% when we worked
+            with Sunnyside. Highly recommended!
+          </p>
+          <div class="author-name-container">
+            <h3>Jennie F.</h3>
+            <p>Business Owner</p>
+          </div>
+        </div>
+      </div>
+    </div>
     
+    <div class ="rand-pics">
+      <img src="./images/mobile/image-gallery-milkbottles.jpg" />
+      <img src="./images/mobile/image-gallery-orange.jpg" alt =""/>
+      <img src="./images/desktop/image-gallery-cone.jpg" />
+      <img src="./images/mobile/image-gallery-sugar-cubes.jpg" />
+    </div>
+
+    <div class = "footer">
+      <div class="learn-more-header photo-clr">
+        <h2>Sunnyside</h2>
+        <ul class="footer-links">
+          <li>About</li>
+          <li>Services</li>
+          <li>Projects</li>
+        </ul>
+
+        <ul class="footer-links">
+          <li><img src="./images/icon-facebook.svg"/></li>
+          <li><img src="./images/icon-instagram.svg"/></li>
+          <li><img src="./images/icon-twitter.svg"/></li>
+          <li><img src="./images/icon-pinterest.svg"/></li>
+        </ul>
+      </div>
+    </div>
+
+
 
   </section>
 </body>
